@@ -43,7 +43,8 @@ public class CompraVuelo extends javax.swing.JFrame {
         asientosEscogidos = new ListaAsientos();
         JTavion.setVisible(false);
         jBmostrarVuelos.setEnabled(false);
-        
+        jDCfechaVuelo.setMinSelectableDate(new Date());
+        jDCfechaVuelo.setEnabled(false);
         jCBvueloDestino.setEnabled(false);
         this.jCBCantidadNiñosMenores2años.setVisible(false);
     }
@@ -161,6 +162,7 @@ public class CompraVuelo extends javax.swing.JFrame {
         jCBvueloOrigen = new javax.swing.JComboBox<>();
         jTFAvionID = new javax.swing.JTextField();
         jCBvueloDestino = new javax.swing.JComboBox<>();
+        jDCfechaVuelo = new com.toedter.calendar.JDateChooser();
         jTFPrecio = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -267,6 +269,13 @@ public class CompraVuelo extends javax.swing.JFrame {
             }
         });
 
+        jDCfechaVuelo.setDateFormatString("d/MM/y");
+        jDCfechaVuelo.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDCfechaVueloPropertyChange(evt);
+            }
+        });
+
         jLabel21.setText("Precio");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -301,6 +310,7 @@ public class CompraVuelo extends javax.swing.JFrame {
                                     .addComponent(jTFAvionID)
                                     .addComponent(jTFIDVuelo)
                                     .addComponent(jCBvueloDestino, 0, 165, Short.MAX_VALUE)
+                                    .addComponent(jDCfechaVuelo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jTFAerolineaParaCompra, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jTFModeloParaCompra, javax.swing.GroupLayout.Alignment.TRAILING)))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -333,7 +343,9 @@ public class CompraVuelo extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jCBvueloDestino, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jDCfechaVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTFIDVuelo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -358,7 +370,7 @@ public class CompraVuelo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTFPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel21))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 20, -1, 360));
@@ -946,6 +958,7 @@ public class CompraVuelo extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jCBCantidadTerceraEdad;
     private javax.swing.JComboBox<String> jCBvueloDestino;
     private javax.swing.JComboBox<String> jCBvueloOrigen;
+    private com.toedter.calendar.JDateChooser jDCfechaVuelo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

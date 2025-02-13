@@ -83,6 +83,7 @@
                                       <Component id="jTFAvionID" max="32767" attributes="0"/>
                                       <Component id="jTFIDVuelo" max="32767" attributes="0"/>
                                       <Component id="jCBvueloDestino" pref="165" max="32767" attributes="0"/>
+                                      <Component id="jDCfechaVuelo" max="32767" attributes="0"/>
                                       <Component id="jTFAerolineaParaCompra" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jTFModeloParaCompra" alignment="1" max="32767" attributes="0"/>
                                   </Group>
@@ -129,7 +130,10 @@
                       <Component id="jCBvueloDestino" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="22" max="-2" attributes="0"/>
+                      <Component id="jDCfechaVuelo" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jTFIDVuelo" min="-2" max="-2" attributes="0"/>
@@ -160,7 +164,7 @@
                       <Component id="jTFPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -267,6 +271,14 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jDCfechaVuelo">
+          <Properties>
+            <Property name="dateFormatString" type="java.lang.String" value="d/MM/y"/>
+          </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jDCfechaVueloPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="jTFPrecio">
         </Component>
