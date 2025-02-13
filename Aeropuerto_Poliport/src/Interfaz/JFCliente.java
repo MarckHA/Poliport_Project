@@ -39,8 +39,7 @@ public class JFCliente extends javax.swing.JFrame {
     
     public JFCliente(int indentificador) {
         initComponents();
-        jDCfechaNacim.setMaxSelectableDate(new Date());
-        JDCfechaNacActualizar.setMaxSelectableDate(new Date());
+        
         setLocationRelativeTo(null);
         setIconImage(getIconImage());
         perClientes.mostrarClientes(JTregistroClientes,1,"");
@@ -90,7 +89,6 @@ public class JFCliente extends javax.swing.JFrame {
         JTFnombre = new javax.swing.JTextField();
         JTFcedula = new javax.swing.JTextField();
         JCBsexo = new javax.swing.JComboBox<>();
-        jDCfechaNacim = new com.toedter.calendar.JDateChooser();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         JTregistroClientes = new javax.swing.JTable();
@@ -122,7 +120,6 @@ public class JFCliente extends javax.swing.JFrame {
         jTFCedulaActualizar = new javax.swing.JTextField();
         jTFNombreActualizar = new javax.swing.JTextField();
         JCBsexoActualizar = new javax.swing.JComboBox<>();
-        JDCfechaNacActualizar = new com.toedter.calendar.JDateChooser();
         jPanel5 = new javax.swing.JPanel();
         JTFcedulaAct = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
@@ -192,8 +189,6 @@ public class JFCliente extends javax.swing.JFrame {
 
         JCBsexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opción", "Masculino", "Femenino", "Otro" }));
 
-        jDCfechaNacim.setDateFormatString("d/MM/y");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -209,8 +204,7 @@ public class JFCliente extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JTFnombre)
                     .addComponent(JTFcedula)
-                    .addComponent(JCBsexo, 0, 237, Short.MAX_VALUE)
-                    .addComponent(jDCfechaNacim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JCBsexo, 0, 237, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -225,10 +219,8 @@ public class JFCliente extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTFcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jDCfechaNacim, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -470,8 +462,6 @@ public class JFCliente extends javax.swing.JFrame {
 
         JCBsexoActualizar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione una opción", "Masculino", "Femenino", "Otro" }));
 
-        JDCfechaNacActualizar.setDateFormatString("dd/MM/yyyy");
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -488,8 +478,7 @@ public class JFCliente extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTFNombreActualizar)
                     .addComponent(jTFCedulaActualizar)
-                    .addComponent(JCBsexoActualizar, 0, 251, Short.MAX_VALUE)
-                    .addComponent(JDCfechaNacActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(JCBsexoActualizar, 0, 251, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -504,9 +493,7 @@ public class JFCliente extends javax.swing.JFrame {
                     .addComponent(jBNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTFNombreActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jBEdad, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
-                    .addComponent(JDCfechaNacActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jBEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBSexo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1053,7 +1040,6 @@ public class JFCliente extends javax.swing.JFrame {
     private javax.swing.JButton JBsiguienteCliente;
     private javax.swing.JComboBox<String> JCBsexo;
     private javax.swing.JComboBox<String> JCBsexoActualizar;
-    private com.toedter.calendar.JDateChooser JDCfechaNacActualizar;
     private javax.swing.JLabel JLclick;
     private javax.swing.JLabel JLpregunta;
     private javax.swing.JPanel JPactualizar;
@@ -1079,7 +1065,6 @@ public class JFCliente extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCBFechaNac;
     private javax.swing.JCheckBox jCBNombre;
     private javax.swing.JCheckBox jCBSexo;
-    private com.toedter.calendar.JDateChooser jDCfechaNacim;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
