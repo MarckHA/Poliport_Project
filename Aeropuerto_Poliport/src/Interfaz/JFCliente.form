@@ -85,7 +85,6 @@
                               <Component id="JTFnombre" max="32767" attributes="0"/>
                               <Component id="JTFcedula" max="32767" attributes="0"/>
                               <Component id="JCBsexo" alignment="0" pref="237" max="32767" attributes="0"/>
-                              <Component id="jDCfechaNacim" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -105,11 +104,8 @@
                               <Component id="JTFcedula" min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel4" min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="jDCfechaNacim" min="-2" pref="26" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" pref="25" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel5" min="-2" pref="25" max="-2" attributes="0"/>
@@ -172,11 +168,6 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
-                </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="jDCfechaNacim">
-                  <Properties>
-                    <Property name="dateFormatString" type="java.lang.String" value="d/MM/y"/>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -615,7 +606,6 @@
                               <Component id="jTFNombreActualizar" max="32767" attributes="0"/>
                               <Component id="jTFCedulaActualizar" max="32767" attributes="0"/>
                               <Component id="JCBsexoActualizar" pref="251" max="32767" attributes="0"/>
-                              <Component id="JDCfechaNacActualizar" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -635,10 +625,7 @@
                               <Component id="jTFNombreActualizar" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jBEdad" pref="26" max="32767" attributes="0"/>
-                              <Component id="JDCfechaNacActualizar" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jBEdad" min="-2" pref="26" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jBSexo" alignment="3" max="32767" attributes="0"/>
@@ -688,11 +675,6 @@
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
-                </Component>
-                <Component class="com.toedter.calendar.JDateChooser" name="JDCfechaNacActualizar">
-                  <Properties>
-                    <Property name="dateFormatString" type="java.lang.String" value="dd/MM/yyyy"/>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
